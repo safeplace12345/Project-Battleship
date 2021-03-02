@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .board{
+        display: flex;
+        flex-direction: column;
+        width: 50vw;
+        height: 50vh;
+        border: 3px solid indianred;
+    }
+    .tile{
+        display: grid;
+        grid-template-columns: repeat(4 ,1fr);
+        height: 100%;
+        border: 1px solid slateblue;
+    }
+    .area{
+        height: 100%;
+        border: 1px solid slateblue;
+        background-color: blanchedalmond;
+    }
+    .area:hover{
+        background-color: burlywood;
+    }
+    body{
+        color: blanchedalmond;
+        text-align: center;
+        margin: 0;
+        display: flex;
+        background-color: black;
+    }
+</style>
+<body>
+    <div class="container">
+        <h5 style="text-align: center;">Player 1</h5>
+        <div class="board" id="player1">
+            <div class="tile">
+                <div class="area" onclick="attack(this)" id='[0,0]'>0</div>
+                <div class="area" onclick="attack(this)" id='[0,1]'>1</div>
+                <div class="area" onclick="attack(this)" id='[0,2]'>2</div>
+                <div class="area" onclick="attack(this)" id='[0,3]'>3</div>
+            </div>
+     <div class="tile"> 
+                 <div class="area" onclick="attack(this)" id='[1,0]'>4</div>
+                <div class="area" onclick="attack(this)" id='[1,1]'>5</div>
+                <div class="area" onclick="attack(this)" id='[1,2]'>6</div>
+                <div class="area" onclick="attack(this)" id='[1,3]'>7</div>
+            </div>
+             <div class="tile">
+                 <div class="area" onclick="attack(this)" id='[2,0]'>8</div>
+                <div class="area" onclick="attack(this)" id='[2,1]'>9</div>
+                <div class="area" onclick="attack(this)" id='[2,2]'>10</div>
+                <div class="area" onclick="attack(this)" id='[2,3]'>11</div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h5 style="text-align: center;">Player 2</h5>
+        <div class="board" id="player2">
+            <div class="tile">
+                <div class="area" onclick="attack(this)" id='[0,0]'>0</div>
+                <div class="area" onclick="attack(this)" id='[0,1]'>1</div>
+                <div class="area" onclick="attack(this)" id='[0,2]'>2</div>
+                <div class="area" onclick="attack(this)" id='[0,3]'>3</div>
+            </div>
+     <div class="tile"> 
+                 <div class="area" onclick="attack(this)" id='[1,0]'>4</div>
+                <div class="area" onclick="attack(this)" id='[1,1]'>5</div>
+                <div class="area" onclick="attack(this)" id='[1,2]'>6</div>
+                <div class="area" onclick="attack(this)" id='[1,3]'>7</div>
+            </div>
+             <div class="tile">
+                 <div class="area" onclick="attack(this)" id='[2,0]'>8</div>
+                <div class="area" onclick="attack(this)" id='[2,1]'>9</div>
+                <div class="area" onclick="attack(this)" id='[2,2]'>10</div>
+                <div class="area" onclick="attack(this)" id='[2,3]'>11</div>
+            </div>
+        </div>
+    </div>
+   <script >
+       function attack(e){
+           console.log(e.id)
+       }
+   </script>
+    <script src="../src/index.js"></script>
+</body>
+</html>
